@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansible Playground</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Ansible Playground</h1>
+        <div class="editor-container">
+            <h2>Edit your Ansible Playbook:</h2>
+            <div id="editor"></div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="simulatePlaybook()">Simulate Playbook Execution</button>
+        </div>
+
+        <div class="output-container">
+            <h2>Simulated Output:</h2>
+            <pre id="output"></pre>
+        </div>
+
+        <div class="examples-container">
+            <h2>Examples of Ansible Playbooks</h2>
+            <button onclick="loadExample1()">Load Example 1</button>
+            <button onclick="loadExample2()">Load Example 2</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
