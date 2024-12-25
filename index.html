@@ -76,21 +76,26 @@
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>Ansible Playground</h1>
         <div class="editor-container">
+            <h2>Edit your Ansible Playbook:</h2>
             <div id="editor"></div>
         </div>
-
+        
         <div class="controls">
-            <button onclick="validateYAML()">Simulate Playbook Execution</button>
+            <button onclick="simulatePlaybook()">Simulate Playbook Execution</button>
         </div>
-
-        <h2>Parsed Output:</h2>
-        <pre id="output"></pre>
+        <div class="output-container">
+            <h2>Simulated Output:</h2>
+            <pre id="output"></pre>
+        </div>
+        <div class="examples-container">
+            <h2>Examples of Ansible Playbooks</h2>
+            <button onclick="loadExample1()">Load Example 1</button>
+            <button onclick="loadExample2()">Load Example 2</button>
+        </div>
     </div>
-
     <script src="js/script.js"></script>
 </body>
 </html>
