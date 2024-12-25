@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +7,90 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-</head>
+    <style>
+        /* CSS Adicional para Ajustes Rápidos dentro do HTML */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .editor-container {
+            margin-bottom: 20px;
+        }
+
+        #editor {
+            width: 100%;
+            height: 300px; /* Definindo um tamanho fixo para o editor */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .output-container {
+            margin-top: 20px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
 <body>
 
     <div class="container">
         <h1>Ansible Playground</h1>
         <div class="editor-container">
-            <h2>Edit your Ansible Playbook:</h2>
             <div id="editor"></div>
         </div>
-        
+
         <div class="controls">
-            <button onclick="simulatePlaybook()">Simulate Playbook Execution</button>
+            <button onclick="validateYAML()">Simulate Playbook Execution</button>
         </div>
 
-        <div class="output-container">
-            <h2>Simulated Output:</h2>
-            <pre id="output"></pre>
-        </div>
-
-        <div class="examples-container">
-            <h2>Examples of Ansible Playbooks</h2>
-            <button onclick="loadExample1()">Load Example 1</button>
-            <button onclick="loadExample2()">Load Example 2</button>
-        </div>
+        <h2>Parsed Output:</h2>
+        <pre id="output"></pre>
     </div>
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
